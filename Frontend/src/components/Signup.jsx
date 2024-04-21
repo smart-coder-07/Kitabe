@@ -14,6 +14,7 @@ const Signup = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  axios.defaults.withCredentials = true;
   const onSubmit = async (data) => {
     const userInfo = {
       fullname: data.fullname,
@@ -21,7 +22,7 @@ const Signup = () => {
       Password: data.password,
     };
     await axios
-      .post("http://localhost:4001/user/signup", userInfo)
+      .post("https://kitabe-api.vercel.app/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

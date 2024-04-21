@@ -9,9 +9,9 @@ const app = express()
 
 //middleware
 app.use(cors({
-  origin: ["https://kitabe.vercel.app"],
-  methods: ["POST", "GET"],
-  credentials: true
+  // origin: ["https://kitabe.vercel.app"],
+  // methods: ["POST", "GET"],
+  // credentials: true
 }));
 app.use(express.json());
 

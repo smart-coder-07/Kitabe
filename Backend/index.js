@@ -9,13 +9,13 @@ const app = express()
 
 //middleware
 app.use(cors({
-  // origin: ["https://kitabe.vercel.app"],
-  // methods: ["POST", "GET"],
-  // credentials: true
+  origin: ["https://kitabe.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
 }));
 app.use(express.json());
 
-dotenv.config();
+
 
 const PORT = 4001 || 4000;
 const URI = "mongodb://localhost:27017/kitabe"

@@ -1,6 +1,5 @@
 import express from "express"
 import mongoose from "mongoose";
-import dotenv from "dotenv"
 import bookRoute from "./route/book.route.js"
 import userRoute from "./route/user.route.js"
 
@@ -18,8 +17,8 @@ app.use(express.json());
 
 dotenv.config();
 
-const PORT = process.env.PORT || 4000;
-const URI = process.env.MongoDBURI;
+const PORT = 4001 || 4000;
+const URI = "mongodb://localhost:27017/kitabe"
 
 //Connect to mongoDB
 
